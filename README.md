@@ -1,3 +1,7 @@
+<img width="538" height="97" alt="image" src="https://github.com/user-attachments/assets/69728074-ae78-469d-9ce0-f7e2ad2cbf71" />
+
+<img width="500" height="381" alt="quantum_sphere_brp" src="https://github.com/user-attachments/assets/6df7869c-f04d-4f3e-ad4d-74b05fb9d427" />
+
 # Q-Signal-R-Results
 
 **Team:** RaceQ
