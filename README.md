@@ -2,116 +2,109 @@
 
 **Team:** Q-Signal  
 **Group:** R-Results  
-**Event:** Alexandria Quantum Hackathon 2025
+**Event:** Alexandria Quantum Hackathon 2025  
 
 ---
 
 ## 📝 Overview
 
-This repository hosts the full pipeline for solving the **Emergency Patient Transportation Routing** hackathon challenge. It includes both classical and quantum approaches:
+This project solves an **Emergency Patient Transportation Routing** challenge using both **classical** and **quantum** optimization techniques.
 
-- **Classical Optimization**  
-  - Exact brute-force (3+2 patient splits)  
-  - Heuristic: split + nearest insertion + 2-opt  
+- **Classical Methods**  
+  - Exact brute-force (3+2 split of patients)  
+  - Heuristic: split → nearest insertion → 2-opt  
 
-- **Quantum Approach**  
-  - QUBO formulation and mapping to the Ising model  
-  - QAOA implementation using PennyLane with depth \(p = 1\) and \(p = 2\)  
+- **Quantum Methods**  
+  - QUBO formulation → Ising model  
+  - QAOA implementation with PennyLane (depth p=1,2)  
 
- OpenRouteService (ORS) is utilized for accurate road-network distance calculations and coordinate snapping.
+Distances are computed with **OpenRouteService (ORS)** for realistic road-network values.
 
 ---
 
-##  Project Structure
+## 📂 Project Structure
+
+.
 ├── OptimizationProblemData.json # Input: hospital & patient coordinates
-├── Day_1_Classical.ipynb # Initial classical solver experiments
-├── Hackathon_Routing_FinalClassic_Unrefactored.ipynb # Final classical pipeline
-├── Hackathon_Routing_FinalClassic_Unrefactored_QUBO1.ipynb # Extended with QUBO and QAOA
-├── roads.py # ORS initialization & cost matrix builder
-├── README.md 
-└── cache
-
+├── oeny_!.ipynb # Notebook: full pipeline (classical + quantum)
+├── LICENSE # MIT License
+├── README.md # Project documentation
+└── cache/ # Local artifacts 
 
 ---
 
-##  Getting Started
+## ⚙️ Installation
 
-### Prerequisites
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/raghadenawar23/Q-Signal-R-Results.git
+   cd Q-Signal-R-Results
 
-- Python 3.8+  
-- Recommended packages:
-  ```bash
-  pip install openrouteservice folium pandas pennylane pennylane-lightning numpy
-
-How to Run
-
-Place your ORS API key in roads.py or export it via:
-
-export ORS_API_KEY="YOUR_API_KEY"
+   
+Install requirements:
 
 
-Execute the classical pipeline:
+pip install -r requirements.txt
 
-jupyter notebook Day_1_Classical.ipynb
+Set your ORS API key:
 
+export ORS_API_KEY="YOUR_KEY_HERE"   # Linux/macOS
+setx ORS_API_KEY "YOUR_KEY_HERE"     # Windows PowerShell
 
-For the full classical and quantum pipeline, run:
+🚀 How to Run
+Open the notebook:
 
-jupyter notebook Hackathon_Routing_FinalClassic_Unrefactored_QUBO1.ipynb
+jupyter notebook oeny_!.ipynb
+The notebook will:
 
+Load coordinates from OptimizationProblemData.json
 
-For reproducibility, ORS-snapped visuals and cost matrices are included or can be generated from these notebooks.
+Build the ORS cost matrix
 
-Results
+Run exact brute force and heuristic solvers
 
-Exact & Heuristic both achieved the optimum total distance: 57.33 km (trip split as H → DT → GR → R3_2 → H, and H → IT → R2 → H).
+Run QAOA with PennyLane
 
-QAOA (depth 
-𝑝
-=
-1
-,
-2
-p=1,2) converged close to optimal energies; sampled routes were near-optimal (approx. 58–61 km).
+Show results and visualizations
 
-Visualizations (to be added as figures) include:
+📊 Results
+Exact (3+2 split)
 
-Workflow diagram
+Trip 1: H → DT → GR → R3_2 → H ≈ 28.70 km
 
-Cost matrix heatmap
+Trip 2: H → IT → R2 → H ≈ 28.63 km
 
-Exact vs. heuristic route overlays
+Total: 57.33 km
 
-QAOA convergence plots
+Heuristic
 
-Acknowledgments
+Same total: 57.33 km
 
-Thanks to the organizers of the Alexandria Quantum Hackathon 2025.
-Team Q-Signal, Group R-Results:
-Abdelrahman Gabr, Menna Zaeid, Mohamed Adel, Omar Romman, Raghade Nawar
+QAOA (p=1,2)
 
-License
+Near-optimal routes: ~58–61 km
 
-Distributed under MIT License.
-See LICENSE
- for details (add if needed).
+🧰 Tools & Libraries
+Python 3.8+
 
-Contact
+OpenRouteService (openrouteservice)
 
-For questions or collaboration, contact:
-Raghade Nawar – [GitHub profile]
+Folium (map visualization)
 
+NumPy, Pandas
 
----
+PennyLane + PennyLane-Lightning
 
-### Why this structure works:
-- **Clear overview**: immediately shows what the project is about.
-- **Detailed project structure**: helps collaborators locate files quickly.
-- **Running instructions**: makes it easy to reproduce work.
-- **Results summary**: gives immediate insights into outcomes.
-- **Acknowledgments and contact**: adds a professional touch.
+👥 Authors
+Team Q-Signal,R-Results
 
-Let me know if you'd like any tweaks or additions, like embedded badges, GIFs, or installation status!
-::contentReference[oaicite:0]{index=0}
+Abdelrahman Gabr
 
+Menna Zaeid
+
+Mohamed Adel
+
+Omar Romman
+
+Raghade Nawar
 
