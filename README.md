@@ -1,7 +1,6 @@
 # Q-Signal-R-Results
 
-**Team:** Q-Signal  
-**Group:** R-Results  
+**Team:** RaceQ
 **Event:** Alexandria Quantum Hackathon 2025  
 
 ---
