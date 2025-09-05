@@ -3,7 +3,7 @@
 <img width="1563" height="1250" alt="quantum_sphere_brp (1)" src="https://github.com/user-attachments/assets/0c531e73-484d-4e90-b2a8-d72a60e2d517" />
 
 
-# Q-Signal-R-Results
+# Quantum and Classical Approaches to Emergency: Patient Transportation Routing
 
 **Team:** RaceQ
 **Event:** Alexandria Quantum Hackathon 2025  
