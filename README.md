@@ -42,8 +42,7 @@ Distances are computed with **OpenRouteService (ORS)** for realistic road-networ
    
 Install requirements:
 
-
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
 Set your ORS API key:
 
@@ -95,15 +94,10 @@ NumPy, Pandas
 PennyLane + PennyLane-Lightning
 
 👥 Authors
-Team Q-Signal,R-Results
-
+Team RaceQ:
 Abdelrahman Gabr
-
 Menna Zaeid
-
 Mohamed Adel
-
 Omar Romman
-
 Raghade Nawar
 
