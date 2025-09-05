@@ -1,6 +1,7 @@
 <img width="538" height="97" alt="image" src="https://github.com/user-attachments/assets/69728074-ae78-469d-9ce0-f7e2ad2cbf71" />
 
-<img width="500" height="381" alt="quantum_sphere_brp" src="https://github.com/user-attachments/assets/6df7869c-f04d-4f3e-ad4d-74b05fb9d427" />
+<img width="1563" height="1250" alt="quantum_sphere_brp (1)" src="https://github.com/user-attachments/assets/0c531e73-484d-4e90-b2a8-d72a60e2d517" />
+
 
 # Q-Signal-R-Results
 
